@@ -19,7 +19,7 @@ const RecoverPasswordVerifyEmailService = async (Request, DataModel) => {
             // Database Second process
             await ResetTokenModel.create({email: email, token:Token})
 
-            const resetURL = `Hi, Please follow this link to reset Your Password. This link is valid till 10 minutes from now. <a href='https://mern-ecommerce-goni.netlify.app/reset-password/${email}/${Token}'>Click Here</>`;
+            const resetURL = `Hi, Please follow this link to reset Your Password. This link is valid till 10 minutes from now. <a href='https://mern-ecommerce-goni.netlify.app/#/reset-password/${email}/${Token}'>Click Here</>`;
 
 
             // Email Send
