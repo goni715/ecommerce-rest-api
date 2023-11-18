@@ -29,8 +29,8 @@ const CreateOrderWithPaymentService = async (Request,OrderModel) => {
             total_amount: totalPrice,
             currency: 'BDT',
             tran_id: transaction_id, // use unique tran_id for each api call
-            success_url: 'http://localhost:5000/api/v1/payment/success/'+transaction_id,
-            fail_url: 'http://localhost:5000/api/v1/payment/fail/'+transaction_id,
+            success_url: 'https://ecommerce-rest-api-goni.vercel.app/api/v1/payment/success/'+transaction_id,
+            fail_url: 'https://ecommerce-rest-api-goni.vercel.app/api/v1/payment/fail/'+transaction_id,
             cancel_url: 'http://localhost:3030/cancel',
             ipn_url: 'http://localhost:3030/ipn',
             shipping_method: 'Courier',
