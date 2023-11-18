@@ -63,7 +63,7 @@ exports.PaymentSuccess=async (req, res) => {
             {paidStatus: true});
 
         if(result.modifiedCount > 0){
-            res.redirect("https://mern-ecommerce-goni.netlify.app/payment/success/"+req.params.tranId);
+            res.redirect("https://mern-ecommerce-goni.netlify.app/#/payment/success/"+req.params.tranId);
         }
     }
     catch (error) {
@@ -81,7 +81,7 @@ exports.PaymentFail=async (req, res) => {
     try{
         let result = await OrderModel.deleteOne({ transactionID:req.params.tranId});
         if(result.deletedCount > 0){
-            res.redirect("https://mern-ecommerce-goni.netlify.app/payment/fail/"+req.params.tranId);
+            res.redirect("https://mern-ecommerce-goni.netlify.app/#/payment/fail/"+req.params.tranId);
         }
     }
     catch (error) {
