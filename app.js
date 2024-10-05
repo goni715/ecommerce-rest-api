@@ -73,6 +73,11 @@ let option = {user:process.env.USER_NAME, pass:process.env.PASS_WORD,autoIndex:t
 app.use('/api/v1', router);
 
 
+app.get('/', (req,res)=> {
+    res.send('This is Ecommerce Server');
+})
+
+
 //Undefined Route
 app.use('*',(req,res)=>{
       res.status(404).json({status:"Fail", data:"Not Found"});
