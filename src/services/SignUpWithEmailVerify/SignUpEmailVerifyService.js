@@ -18,7 +18,7 @@ const SignUpEmailVerifyService = async (Request,UsersModel,RegOTPModel) => {
             // Email Send
             let SendEmail = await SendEmailUtility(Email, "Your Verification Code is= " + OTPCode, "GH Ecommerce PIN Verification");
 
-           return {status: "success", data: SendEmail};
+           return {status: "success"};
         }
         else{
             return {status: "fail", data: "EmailAlreadyExist"}

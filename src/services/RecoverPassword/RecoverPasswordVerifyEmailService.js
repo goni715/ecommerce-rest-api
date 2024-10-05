@@ -25,7 +25,7 @@ const RecoverPasswordVerifyEmailService = async (Request, DataModel) => {
             // Email Send
             let SendEmail = await SendEmailUtilityTwo(email,"Hey User","Ecommerce MERN", resetURL)
 
-            return {status: "success", data: SendEmail}
+            return {status: "success"}
         }
         else{
             return {status: "fail", data: "NoUserFound"}
